@@ -4,12 +4,17 @@
   src: url("../fonts/CaviarDreams.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: 'CaviarDreams_Bold';
+  src: url("../fonts/CaviarDreams_Bold.ttf") format("truetype");
+}
+
 body {
   color: #fff;
   font-family: 'CaviarDreams', '遊ゴシック', 'ヒラギノ角ゴ ProN';
 }
 
-#header {
+.mob_header_wrapper {
   height: 65px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -22,21 +27,22 @@ body {
           align-items: center;
   width: 100%;
   position: fixed;
+  z-index: 99;
 }
 
-#header h1 {
+.mob_header_wrapper h1 {
   padding-left: 5%;
 }
 
-#header h1 img {
+.mob_header_wrapper h1 img {
   width: 60px;
 }
 
-#header .header_icon {
-  margin-right: 60px;
+.mob_header_wrapper .header_icon {
+  margin-right: 50px;
 }
 
-#header .header_icon .icon {
+.mob_header_wrapper .header_icon .icon {
   width: 27px;
 }
 
@@ -78,17 +84,18 @@ section {
 #g-nav {
   /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   /*ナビのスタート位置と形状*/
   top: -120%;
   left: 0;
   width: 100%;
-  height: 65vh;
+  height: 100vh;
   /*ナビの高さ*/
-  background: #999;
+  background: black;
   /*動き*/
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  opacity: 0.9;
 }
 
 /*アクティブクラスがついたら位置を0に*/
@@ -100,9 +107,9 @@ section {
 #g-nav.panelactive #g-nav-list {
   /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
-  z-index: 999;
+  z-index: 9999;
   width: 100%;
-  height: 65vh;
+  height: 100vh;
   /*表示する高さ*/
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -112,7 +119,7 @@ section {
 #g-nav ul {
   /*ナビゲーション天地中央揃え*/
   position: absolute;
-  z-index: 999;
+  z-index: 9999;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -127,23 +134,32 @@ section {
 
 #g-nav li a {
   color: #fff;
+  opacity: 1;
   text-decoration: none;
   padding: 10px;
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
+  font-family: 'CaviarDreams_Bold';
+}
+
+.nav-subText {
+  font-size: 8px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-weight: normal;
 }
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn {
   position: fixed;
-  z-index: 9999;
+  z-index: 99999;
   /*ボタンを最前面に*/
   top: 10px;
   right: 7px;
   cursor: pointer;
-  width: 60px;
+  width: 50px;
   height: 60px;
 }
 
@@ -189,5 +205,296 @@ section {
   -webkit-transform: translateY(-6px) rotate(45deg);
           transform: translateY(-6px) rotate(45deg);
   width: 30%;
+}
+
+/*===========================================================*/
+/*テーブル
+/*===========================================================*/
+table {
+  border-collapse: collapse;
+  width: 90%;
+  font-size: 14px;
+  font-family: '遊ゴシック', 'ヒラギノ角ゴ ProN';
+  table-layout: auto;
+  margin: 0 auto;
+}
+
+th {
+  border: 1px solid #fff;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  width: 30%;
+  line-height: 20px;
+}
+
+td {
+  border: 1px solid #fff;
+  width: 70%;
+}
+
+/*===========================================================*/
+/*ショップイメージ
+/*===========================================================*/
+.shopImg_wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.shopImg_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.shopImg {
+  position: relative;
+  width: calc(100% / 3);
+  background-color: #fff;
+}
+
+.shopImg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.shopImg img:hover {
+  opacity: 0.8;
+}
+
+.shopImg::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/*===========================================================*/
+/*フッター
+/*===========================================================*/
+/*===========================================================*/
+/*ACCESS
+/*===========================================================*/
+#access {
+  background-color: #000;
+}
+
+.map_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+/*===========================================================*/
+/*shop_info
+/*===========================================================*/
+#access {
+  padding: 70px 0 0 0;
+}
+
+.footer_wrapper {
+  background-color: #525252;
+  font-family: '遊ゴシック', 'ヒラギノ角ゴ ProN';
+  display: block;
+}
+
+.footer_logo {
+  width: 77px;
+  margin: 20px;
+}
+
+.footerInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  line-height: 23px;
+  font-size: 13px;
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.shop_info {
+  margin: 0 auto;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.open {
+  margin-top: 15px;
+}
+
+.footer_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer_bottom img {
+  width: 24px;
+  margin: 20px 10px;
+}
+
+.footer_text {
+  text-align: center;
+  font-size: 13px;
+  padding-bottom: 80px;
+}
+
+#mob_footer.fixed {
+  position: fixed;
+  z-index: 9;
+  bottom: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1d1d1d;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.mob_footer_icon {
+  width: calc(100% / 5);
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 12px;
+}
+
+.mob_footer_icon img {
+  height: 20px;
+}
+
+.mob_footer_icon p {
+  font-size: 8px;
+  color: #EF8582;
+  padding: 5px 0 10px 0;
+}
+
+@media (max-width: 767px) {
+  .pc_header {
+    display: none;
+  }
+}
+
+@media (min-width: 767px) {
+  .pc_header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    height: 100px;
+  }
+  .pc_headerlist {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: 'CaviarDreams_Bold';
+  }
+  .pc_header_contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+  .pc_header_contents .nav-subText {
+    font-size: 12px;
+  }
+  .header_icon_pc .icon {
+    width: 27px;
+  }
+  .mob_header,
+  .mob_header_wrapper,
+  .openbtn {
+    display: none;
+  }
+  #header {
+    height: 100px;
+  }
+  #header h1 img {
+    width: 100px;
+  }
+  #mob_footer {
+    display: none !important;
+  }
+  .shop_info {
+    max-width: 600px;
+  }
+  .shop_info img {
+    width: 144px;
+  }
+  .shopImg {
+    position: relative;
+    width: calc(100% / 4);
+    background-color: #fff;
+  }
+  .shopImg img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 /*# sourceMappingURL=common.css.map */

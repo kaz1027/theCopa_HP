@@ -8,17 +8,36 @@
     <meta name="description" content="川崎にセクシーキャバクラの常識をくつがえす新感覚セクキャバ Copa（コパ）！川崎駅徒歩1分。仲見世通り入口にある、駅から一番近いセクキャバです。">
     <meta name="keywords" content="川崎,セクキャバ,おっパブ,キャバクラ,夜のお店,飲み屋,仲見世通り,駅近,終電">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" integrity="sha512-ZKX+BvQihRJPA8CROKBhDNvoc2aDMOdAlcm7TUQY+35XYtrd3yh95QOOhsPDQY9QnKE0Wqag9y38OIgEvb88cA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="css/top.css">
     <link rel="stylesheet" type="text/css" href="css/common.css">
+    <script src="https://kit.fontawesome.com/235a6e7d84.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body ontouchstart="">
     <header>
         <div id="header">
-            <h1><a href="#"><img src="img/logo.png" alt="logo"></a></h1>
-            <div class="header_icon">
-                <a href=""><img src="img/icon/twitter.png" alt="icon" class="icon"></a>
-                <a href=""><img src="img/icon/insta.png" alt="icon" class="icon"></a>
+            <div class="pc_header">
+                <h1><a href="#"><img src="img/logo.png" alt="logo"></a></h1>
+                <ul id="page-link" class="pc_headerlist">
+                    <li><a href="#cast" class="pc_header_contents"><p>CAST LIST</p></a></li>
+                    <li><a href="#system" class="pc_header_contents"><p>SYSTEM</p></a></li>
+                    <li><a href="#recruit" class="pc_header_contents"><p>RECRUIT-CAST-</p></a></li>
+                    <li><a href="#recruit" class="pc_header_contents"><p>RECRUIT-STAFF-</p></a></li>
+                    <li><a href="#access" class="pc_header_contents"><p>ACCESS</p></a></li>
+                    <li><a href="#access" class="pc_header_contents"><p>CONTACT</p></a></li>
+                    <div class="header_icon_pc">
+                        <a href="#"><img src="img/icon/twitter.png" alt="icon" class="icon"></a>
+                        <a href="#"><img src="img/icon/insta.png" alt="icon" class="icon"></a>
+                    </div>
+                </ul>
+            </div>
+            <div class="mob_header_wrapper">
+                <h1><a href="#"><img src="img/logo.png" alt="logo"></a></h1>
+                <div class="header_icon">
+                    <a href="#"><img src="img/icon/twitter.png" alt="icon" class="icon"></a>
+                    <a href="#"><img src="img/icon/insta.png" alt="icon" class="icon"></a>
+                </div>
             </div>
             <div class="openbtn">
                 <span></span>
@@ -27,11 +46,16 @@
             </div>
             <nav id="g-nav">
                 <div id="g-nav-list">
-                    <ul>
-                        <li><a href="#">ABOUT</a></li>	
-                        <li><a href="#">About</a></li>	
-                        <li><a href="#">Service</a></li>	
-                        <li><a href="#">Contact</a></li>	
+                    <ul id="page-link">
+                        <li><a href="#shop-blog"><p>SHOP BLOG</p><p class="nav-subText">店舗ブログ</p></a></li>
+                        <li><a href="#cast-blog"><p>CAST BLOG</p><p class="nav-subText">キャストブログ</p></a></li>
+                        <li><a href="#cast"><p>CAST LIST</p><p class="nav-subText">キャスト一覧</p></a></li>
+                        <li><a href="#system"><p>SYSTEM</p><p class="nav-subText">料金システム</p></a></li>
+                        <li><a href="#event"><p>EVENT</p><p class="nav-subText">イベント情報</p></a></li>
+                        <li><a href="#shop-image"><p>SHOP IMAGE</p><p class="nav-subText">店内写真</p></a></li>
+                        <li><a href="#recruit"><p>RECRUIT-CAST-</p><p class="nav-subText">キャスト求人情報</p></a></li>
+                        <li><a href="#recruit"><p>RECRUIT-STAFF-</p><p class="nav-subText">スタッフ求人情報</p></a></li>
+                        <li><a href="#access"><p>ACCESS</p><p class="nav-subText">アクセス</p></a></li>
                     </ul>
                 </div>
             </nav>
@@ -41,6 +65,7 @@
         <div id="video_area">
             <div id="top_logo"><img src="img/logo.png" alt="top_logo"></div>
             <video id="video" src="img/video/short.mp4" webkit-playsinline playsinline muted autoplay loop></video>
+            <div class="scrolldown2"><span>Scroll</span></div>
         </div>
     </div>
     <main>
@@ -57,16 +82,26 @@
                 「大人の秘密基地」にふさわしいドキドキワクワクが<br>
                 止まらない最高にHOTなお店に仕上がっています！！</p>
         </section>
+        <div class="about_photo">
+            <img src="img/shop_image/shopImg_02.jpg" alt="">
+        </div>
+        <section id="recruit">
+            <h2 class="heading">RECRUIT</h2>
+            <div class="banner_wrapper">
+                <img src="img/banner/dummy.png" alt="" class="banner">
+                <img src="img/banner/dummy.png" alt="" class="banner">
+            </div>
+        </section>
         <div id="pc_blog_float">
             <section id="shop-blog" class="blog">
                 <h2 class="heading">SHOP BLOG</h2>
                 <iframe id="sub" src="https://cabanavi.info/shop/8180/shop_blogs/"></iframe>
-                <a href="#" class="btn bgskew"><span>more</span></a>
+                <a href="#" class="btn bgskew"><span>more</span><div class="arrow01"></div></a>
             </section>
             <section id="cast-blog" class="blog">
                 <h2 class="heading">CAST BLOG</h2>
                 <iframe id="" src="https://cabanavi.info/shop/8180/blog/"></iframe>
-                <a href="#" class="btn bgskew"><span>more</span></a>
+                <a href="#" class="btn bgskew"><span>more</span><div class="arrow01"></div></a>
             </section>
         </div>
         <section id="cast">
@@ -90,109 +125,111 @@
             </div>
         </section>
         <section id="system">
-            <h2 class="heading">SYSTEM</h2>
-            <table class="system-table">
-                <tr>
-                    <th>基本料金</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time">20:00 ~ 22:00</p><p class="price">¥8,400</p>
-                        </div>
-                        <div class="s_detail_float">
-                            <p class="system_time">22:00 ~ LAST</p><p class="price">¥9,600</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>延　長</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time">30分</p><p class="price">¥6,000</p>
-                        </div>
-                        <div class="s_detail_float">
-                            <p class="system_time">50分</p><p class="price">¥9,600</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>指　名</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time">本指名</p><p class="price">¥2,400</p>
-                        </div>
-                        <div class="s_detail_float">
-                            <p class="system_time">場内指名</p><p class="price">¥1,800</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>延　長</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time">2セット100分</p><p class="price">¥25,000</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>同伴料金</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time">24:00</p><p class="price">¥8,400</p>
-                        </div>
-                        <div class="s_detail_float">
-                            <p class="system_time">24:00</p><p class="price">¥8,400</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>キャスト
-                        ドリンク</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time"></p><p class="price">¥1,200~</p>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>TAX/<br>
-                        サービス料</th>
-                    <td class="s_detail">
-                        <div class="s_detail_float">
-                            <p class="system_time">通常料金</p><p class="price">20%</p>
-                        </div>
-                        <div class="s_detail_float">
-                            <p class="system_time">VIP ROOM料金</p><p class="price">30%</p>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <p class="vip_photo">VIP ROOM</p>
-            <div class="vip_photo">
-                <img src="img/shop_image/shopImg_05.jpg" alt="VIPルーム" class="vip_photo_img">
-                <img src="img/shop_image/shopImg_08.jpg" alt="VIPルーム" class="vip_photo_img">
+            <h2 class="heading system-heading">SYSTEM</h2>
+            <div class="system_wrapper">
+                <div class="section-table">
+                    <table class="system-table">
+                        <tr>
+                            <th>基本料金</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time">20:00 ~ 22:00</p><p class="price">¥8,400</p>
+                                </div>
+                                <div class="s_detail_float">
+                                    <p class="system_time">22:00 ~ LAST</p><p class="price">¥9,600</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>延　長</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time">30分</p><p class="price">¥6,000</p>
+                                </div>
+                                <div class="s_detail_float">
+                                    <p class="system_time">50分</p><p class="price">¥9,600</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>指　名</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time">本指名</p><p class="price">¥2,400</p>
+                                </div>
+                                <div class="s_detail_float">
+                                    <p class="system_time">場内指名</p><p class="price">¥1,800</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>指名延長</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time">延長30分</p><p class="price">¥8,400</p>
+                                </div>
+                                <div class="s_detail_float">
+                                    <p class="system_time">延長50分</p><p class="price">¥8,400</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>同伴料金</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time">2セット100分</p><p class="price">¥25,000</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>キャスト<br>
+                                ドリンク</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time"></p><p class="price">¥1,200~</p>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>TAX/<br>
+                                サービス料</th>
+                            <td class="s_detail">
+                                <div class="s_detail_float">
+                                    <p class="system_time">通常料金</p><p class="price">20%</p>
+                                </div>
+                                <div class="s_detail_float">
+                                    <p class="system_time">VIP ROOM料金</p><p class="price">30%</p>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="section-vipImg">
+                    <p class="system_photo_text">VIP ROOM</p>
+                    <div class="vip_photo">
+                        <img src="img/shop_image/shopImg_05.jpg" alt="VIPルーム" class="vip_photo_img">
+                        <img src="img/shop_image/shopImg_08.jpg" alt="VIPルーム" class="vip_photo_img">
+                    </div>
+                </div>
             </div>
         </section>
         <section id="shop-image">
             <h2 class="heading">SHOP IMAGE</h2>
             <div class="shopImg_wrapper">
                 <ul class="shopImg_list">
-                    <li class="shopImg"><a href="img/shop_image/shopImg_01.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_01.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_02.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_02.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_03.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_03.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_04.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_04.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_05.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_05.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_06.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_06.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_07.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_07.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_08.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_08.jpg" alt="店内写真"></a></li>
-                    <li class="shopImg"><a href="img/shop_image/shopImg_09.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="img/shop_image/shopImg_09.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_01.jpg" data-lightbox="gallery1" data-title="外観"><img src="img/shop_image/shopImg_01.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopimg_01_1.jpg" data-lightbox="gallery1" data-title="外観"><img src="img/shop_image/shopimg_01_1.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_01_2.jpg" data-lightbox="gallery1" data-title="外観"><img src="img/shop_image/shopImg_01_2.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_02.jpg" data-lightbox="gallery1" data-title="店内写真１"><img src="img/shop_image/shopImg_02.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_03.jpg" data-lightbox="gallery1" data-title="店内写真２"><img src="img/shop_image/shopImg_03.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_04.jpg" data-lightbox="gallery1" data-title="店内写真３"><img src="img/shop_image/shopImg_04.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_06.jpg" data-lightbox="gallery1" data-title="店内写真４"><img src="img/shop_image/shopImg_06.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_07.jpg" data-lightbox="gallery1" data-title="店内写真５"><img src="img/shop_image/shopImg_07.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_09.jpg" data-lightbox="gallery1" data-title="店内写真６"><img src="img/shop_image/shopImg_09.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_10.jpg" data-lightbox="gallery1" data-title="店内写真7"><img src="img/shop_image/shopImg_10.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_08.jpg" data-lightbox="gallery1" data-title="VIP ROOM１"><img src="img/shop_image/shopImg_08.jpg" alt="店内写真"></a></li>
+                    <li class="shopImg"><a href="img/shop_image/shopImg_05.jpg" data-lightbox="gallery1" data-title="VIP ROOM２"><img src="img/shop_image/shopImg_05.jpg" alt="店内写真"></a></li>
                 </ul>
-            </div>
-        </section>
-        <section id="recruit">
-            <h2 class="heading">RECRUIT</h2>
-            <div class="banner_wrapper">
-                <img src="img/banner/dummy.png" alt="" class="banner">
-                <img src="img/banner/dummy.png" alt="" class="banner">
             </div>
         </section>
     </main>
@@ -200,59 +237,64 @@
         <section id="access">
             <h2 class="heading">ACCESS</h2>
             <div class="access_wrapper">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.978617279039!2d139.6976640152546!3d35.52952608023005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018612d952e7871%3A0x5fc0513103b3101a!2zdGhlIENvcGHvvIjjgrPjg5HvvIk!5e0!3m2!1sja!2sjp!4v1645174672982!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                <div class="shop_info">
-                    <div class="footer_logo"><img src="img/logo.png" alt="ロゴ"></div>
-                    <div class="footerInfo">
-                        <div class="address"><p class="address_title bold">ADDRESS</p><p class="address_text">〒210-0006<br>
-                            神奈川県川崎市<br>
-                            川崎区砂子2-3-17<br>
-                            仲見世金井ビル3F</p>
-                        </div>
-                        <div class="footerInfo_child">
-                            <div class="tel"><p class="tel_title bold">TEL</p><p class="tel_text">044-201-4518</p></div>
-                            <div class="open"><p class="open_title bold">OPENING HOURS</p><p class="open_text">20:00 ~ LAST　年中無休</p></div>
+                <div class="map_wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.978440615319!2d139.69766401572952!3d35.52953044588326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018612d952e7871%3A0x5fc0513103b3101a!2zdGhlIENvcGHvvIjjgrPjg5HvvIk!5e0!3m2!1sja!2sjp!4v1645422770809!5m2!1sja!2sjp" width="100%" height="450"></iframe>
+                </div>
+                <div class="footer_wrapper">
+                    <div class="shop_info">
+                        <img src="img/logo.png" alt="ロゴ" class="footer_logo">
+                        <div class="footerInfo">
+                            <div class="address"><p class="address_title bold">ADDRESS</p><p class="address_text">〒210-0006<br>
+                                神奈川県川崎市<br>
+                                川崎区砂子2-3-17<br>
+                                仲見世金井ビル3F</p>
+                            </div>
+                            <div class="footerInfo_child">
+                                <div class="tel"><p class="tel_title bold">TEL</p><p class="tel_text">044-201-4518</p></div>
+                                <div class="open"><p class="open_title bold">OPENING HOURS</p><p class="open_text">20:00 ~ LAST　年中無休</p></div>
+                            </div>
                         </div>
                     </div>
+                    <div class="footer_bottom">
+                        <img src="img/icon/twitter.png" alt="アイコン">
+                        <img src="img/icon/insta.png" alt="アイコン">
+                    </div>
+                    <p class="footer_text">© 2022 theCopa</p>
                 </div>
             </div>
-            <div class="footer_icon">
-                <img src="img/icon/twitter.png" alt="アイコン">
-                <img src="img/icon/insta.png" alt="アイコン">
-            </div>
-            <p class="footer_text">© 2022 theCopa</p>
-            <div class="mob_footer">
-                <a href="#">
-                    <img src="img/icon/map.png" alt="">
-                        <p>アクセス</p>
-                    </img>
-                </a>
-                <a href="#">
-                    <img src="img/icon/staff.png" alt="">
-                        <p>スタッフ求人</p>
-                    </img>
-                </a>
-                <a href="#">
-                    <img src="img/icon/cast.png" alt="">
-                        <p>キャスト求人</p>
-                    </img>
-                </a>
-                <a href="#">
-                    <img src="img/icon/blog.png" alt="">
-                        <p>店舗ブログ</p>
-                    </img>
-                </a>
-                <a href="#">
-                    <img src="img/icon/tel_Icon.png" alt="">
-                        <p>電　話</p>
-                    </img>
-                </a>
-            </div>
         </section>
+        <div id="mob_footer" class="bold">
+            <a href="#" class="mob_footer_icon">
+                <img src="img/icon/map.png" alt="">
+                    <p>アクセス</p>
+                </img>
+            </a>
+            <a href="#" class="mob_footer_icon">
+                <img src="img/icon/staff.png" alt="">
+                    <p>スタッフ求人</p>
+                </img>
+            </a>
+            <a href="#" class="mob_footer_icon">
+                <img src="img/icon/cast.png" alt="">
+                    <p>キャスト求人</p>
+                </img>
+            </a>
+            <a href="#" class="mob_footer_icon">
+                <img src="img/icon/blog.png" alt="">
+                    <p>店舗ブログ</p>
+                </img>
+            </a>
+            <a href="#" class="mob_footer_icon">
+                <img src="img/icon/tel_Icon.png" alt="">
+                    <p>電　話</p>
+                </img>
+            </a>
+        </div>
     </footer>
     <!-- jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" integrity="sha512-k2GFCTbp9rQU412BStrcD/rlwv1PYec9SNrkbQlo6RZCf75l6KcC3UwDY8H5n5hl4v77IDtIPwOk9Dqjs/mMBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/235a6e7d84.js" crossorigin="anonymous"></script>
     <script src="./JS/script.js"></script>
 </body>
 </html>
