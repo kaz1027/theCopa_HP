@@ -1,0 +1,285 @@
+@charset "UTF-8";
+body {
+  background-color: black;
+}
+
+.recruit_main {
+  padding-top: 100px;
+}
+
+.recruit_banner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recruit_banner img {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.recruit_heading {
+  font-family: 'ヒラギノ明朝 ProN', '游明朝';
+  font-size: 27px;
+}
+
+.point_wrapper {
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #FFA8C0;
+  padding: 25px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.point_heading {
+  color: #ffa3ce;
+  text-shadow: 0 0 10px #ff0077, 0 0 15px #ff0077;
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #FFA8C0;
+}
+
+.point_text {
+  font-size: 13px;
+  margin: 15px 5px;
+  line-height: 23px;
+}
+
+#work_flow {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.w_f_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.w_f_heading {
+  font-size: 20px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.w_f_heading:before,
+.w_f_heading:after {
+  border-top: 1px solid #fff;
+  content: "";
+  width: 20px;
+}
+
+.w_f_heading:before {
+  margin-right: 20px;
+}
+
+.w_f_heading:after {
+  margin-left: 20px;
+}
+
+.recruit_heading_sub {
+  font-size: 11px;
+  text-align: center;
+  color: #FF5D89;
+}
+
+.w_f_heading {
+  font-size: 22px;
+}
+
+.w_f_contents {
+  width: 90%;
+  max-width: 800px;
+  border: 1px solid #fff;
+  padding: 25px 0 10px 0;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 30px;
+  font-family: '遊ゴシック', 'ヒラギノ角ゴ ProN';
+  letter-spacing: 1px;
+  height: 340px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 300px;
+}
+
+.w_f_headding {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+}
+
+.w_f_headding img {
+  width: 50px;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.w_f_TEL img {
+  background-color: #1076CB;
+}
+
+.w_f_LINE img {
+  background-color: #12C211;
+}
+
+.w_f_MAIL img {
+  background-color: #8E00A0;
+}
+
+.w_f_heading_text {
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 15px;
+}
+
+.w_f_explanation {
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.w_f_explanation_sub {
+  font-size: 10px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 7px 0 7px;
+  border-color: #fff transparent transparent transparent;
+  margin: 5px auto;
+}
+
+.my-btn {
+  text-align: center;
+}
+
+.my-btn a {
+  display: inline-block;
+  width: 50%;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+  color: #fff !important;
+  text-decoration: none;
+  font-size: 15px;
+  line-height: 27px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+}
+
+.w_f_TELBtn {
+  background-color: #1076CB;
+  border-bottom: 4px solid #0661ac;
+  overflow: hidden;
+}
+
+.w_f_LINE_btn {
+  background: #12C211;
+  border-bottom: 4px solid #029702;
+  overflow: hidden;
+}
+
+.w_f_MAIL_btn {
+  background: #8E00A0;
+  border-bottom: 4px solid #750185;
+  overflow: hidden;
+}
+
+/* ボタンを凹ませる */
+.my-btn a:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  /*下に動く*/
+  -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  /*影を小さく*/
+  border-bottom: none;
+}
+
+/* ボタンをキラッとさせる */
+.my-btn a:before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 80%, white 81%, rgba(255, 255, 255, 0) 100%);
+  -webkit-animation: shine 3s infinite;
+          animation: shine 3s infinite;
+  /* inifiniteによりずっと続ける */
+}
+
+@-webkit-keyframes shine {
+  33% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes shine {
+  33% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* テキストの後ろにarrow */
+.my-btn a:after {
+  content: '»';
+  display: inline-block;
+  color: #fff;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.my-btn a {
+  width: 90%;
+}
+/*# sourceMappingURL=recruit.css.map */

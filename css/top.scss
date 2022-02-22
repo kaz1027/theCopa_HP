@@ -39,6 +39,80 @@
     }
 }
 
+/*========= スクロールダウンのためのCSS ===============*/
+
+/*=== 9-1-2 丸が動いてスクロールを促す ====*/
+
+/*スクロールダウン全体の場所*/
+.scrolldown2{
+    /*描画位置※位置は適宜調整してください*/
+	position:absolute;
+	bottom:20px;
+	left:50%;
+}
+
+/*Scrollテキストの描写*/
+.scrolldown2 span{
+    /*描画位置*/
+	position: absolute;
+	left:10px;
+	bottom:10px;
+    /*テキストの形状*/
+	color: #eee;
+	font-size: 0.7rem;
+	letter-spacing: 0.05em;
+	/*縦書き設定*/
+	-ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+}
+
+/* 丸の描写 */
+.scrolldown2:before {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    bottom:0;
+    left:-4px;
+    /*丸の形状*/
+	width:10px;
+	height:10px;
+	border-radius: 50%;
+	background:#eee;
+    /*丸の動き1.6秒かけて透過し、永遠にループ*/
+	animation:
+		circlemove 1.6s ease-in-out infinite,
+		cirlemovehide 1.6s ease-out infinite;
+}
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove{
+      0%{bottom:45px;}
+     100%{bottom:-5px;}
+ }
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide{
+      0%{opacity:0}
+     50%{opacity:1;}
+    80%{opacity:0.9;}
+	100%{opacity:0;}
+ }
+
+/* 線の描写 */
+.scrolldown2:after{
+	content:"";
+    /*描画位置*/
+	position: absolute;
+	bottom:0;
+	left:0;
+    /*線の形状*/
+	width:1px;
+	height: 50px;
+	background:#eee;
+}
+
+
 main {
     background: #000;
 }
@@ -50,6 +124,8 @@ main {
 
 #about {
     text-align: center;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .about_lead {
@@ -60,26 +136,45 @@ main {
     letter-spacing: 1px;
 }
 
+.about_photo {
+    width: 100%;
+    img {
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        opacity: 0.9;
+    }
+}
+
+
 
 
 /*===========================================================*/
 /*店舗ブログ
 /*===========================================================*/
 
+// #pc_blog_float {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     -webkit-flex-wrap: wrap;          /* Safari etc. */
+//     -ms-flex-wrap    : wrap;          /* IE10        */
+//     flex-wrap        : wrap;
+//     width: 100%;
+// }
+
 .blog {
     display: flex;
     flex-direction: column;
+    iframe {
+        border: none;
+        width: 90%;
+        max-width: 400px;
+        height: 500px;
+        background-color: #fff;
+        margin: 0 auto;
+    }
 }
-
-iframe {
-    border: none;
-    width: 90%;
-    max-width: 400px;
-    height: 500px;
-    background-color: #fff;
-    margin: 0 auto;
-}
-
 
 
 
@@ -90,8 +185,8 @@ iframe {
 	overflow: hidden;
     /*ボタンの形状*/
 	text-decoration: none;
-	display: inline-block;
-   	border: 1px solid #555;/* ボーダーの色と太さ */
+	
+   	border: 1px solid #fff;/* ボーダーの色と太さ */
     padding: 10px 30px;
     text-align: center;
     outline: none;
@@ -99,18 +194,46 @@ iframe {
     transition: ease .2s;
     margin: 30px auto;
     width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /*ボタン内spanの形状*/
 .btn span {
 	position: relative;
 	z-index: 3;/*z-indexの数値をあげて文字を背景よりも手前に表示*/
-	color:#333;
+	color: #fff;
 }
 
 .btn:hover span{
-	color:#fff;
+	color: #000;
 }
+
+.arrow01 {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-top: solid 1px #fff;
+    border-right: solid 1px #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn:hover .arrow01 {
+    display: block;
+    width: 9px;
+    height: 9px;
+    border-top: solid 1px #000;
+    border-right: solid 1px #000;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+}
+
+
+
+
 
 /*== 背景が流れる（斜め） */
 .bgskew::before {
@@ -120,7 +243,7 @@ iframe {
 	top: 0;
 	left: -130%;
     /*色や形状*/
-	background:#333;
+	background: #fff;
 	width:120%;
 	height: 100%;
 	transform: skewX(-25deg);
@@ -137,20 +260,191 @@ iframe {
 	}
 }
 
-.zoomIn img{
-	transform: scale(1);
-	transition: .3s ease-in-out;/*移り変わる速さを変更したい場合はこの数値を変更*/
+
+/*===========================================================*/
+/*キャスト
+/*===========================================================*/
+
+#cast {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.zoomIn a:hover img{/*hoverした時の変化*/
-	transform: scale(1.2);/*拡大の値を変更したい場合はこの数値を変更*/
+.cast-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;          /* Safari etc. */
+    -ms-flex-wrap    : wrap;          /* IE10        */
+    flex-wrap        : wrap;
+}
+
+.zoomIn {
+    text-align: center;
+    margin: 30px 10px;
+}
+
+.zoomIn img {
+    width:100px;
+    height:100px;
+    object-fit:cover;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    /*移り変わる速さを変更したい場合はこの数値を変更*/
+}
+
+.zoomIn a:hover img {
+    /*hoverした時の変化*/
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    /*拡大の値を変更したい場合はこの数値を変更*/
 }
 
 /*　画像のマスク　*/
-
-.mask{
+.mask {
     display: block;
-    line-height: 0;/*行の高さを0にする*/
-    overflow: hidden;/*拡大してはみ出る要素を隠す*/
+    line-height: 0;
+    /*行の高さを0にする*/
+    overflow: hidden;
+    /*拡大してはみ出る要素を隠す*/
+    border-radius: 50%;
 }
 
+.castName {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+
+/*===========================================================*/
+/*イベント
+/*===========================================================*/
+
+.eventImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 550px;
+    }
+}
+
+
+/*===========================================================*/
+/*システム
+/*===========================================================*/
+#system {
+    margin: 0 auto;
+    background-color: #00075D;
+}
+
+.system-heading {
+    color: #EEB50A;
+}
+
+.system-heading:before,
+.system-heading:after {
+    border-top: 1px solid #EEB50A;
+    content: "";
+    width: 20px; 
+}
+.system-heading:before {
+    margin-right: 20px; 
+}
+.system-heading:after {
+    margin-left: 20px; 
+}
+
+.system_wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;          /* Safari etc. */
+    -ms-flex-wrap    : wrap;          /* IE10        */
+    flex-wrap        : wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+
+}
+
+.section-table {
+    width: 95%;
+    max-width: 500px;
+}
+
+.s_detail_float {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    .system_time {
+        white-space: nowrap;
+        
+    }
+
+    .price {
+        font-weight: bold;
+    }
+}
+
+
+.section-vipImg {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+        align-items: center;
+        flex-direction: column;
+    .vip_photo {
+        width: 90%;
+        max-width: 450px;
+        img {
+            margin: 0 auto;
+            margin-top: 10px;
+            width: 100%;
+        }
+    }
+}
+
+.system_photo_text {
+    margin: 20px auto 0 auto;
+    width: 90%;
+}
+
+/*===========================================================*/
+/*リクルート
+/*===========================================================*/
+
+.banner_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img {
+        margin: 10px 0;
+        width: 90%;
+        max-width: 450px;
+    }
+}
+
+
+@media (min-width:767px) {
+    #mob_footer {
+        display: none;
+    }
+    #pc_blog_float {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        #shop-blog {
+            width: 50%;
+        }
+        #cast-blog {
+            width: 50%;
+        }
+    }
+}
