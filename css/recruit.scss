@@ -4,7 +4,16 @@ body {
 
 .recruit_main {
     padding-top: 100px;
+    font-family: '遊ゴシック', 'ヒラギノ角ゴ ProN';
 }
+
+@media (min-width:767px) {
+    .recruit_main {
+        padding-top: 10px;
+    }
+}
+
+
 
 .recruit_banner {
     display: flex;
@@ -22,7 +31,7 @@ body {
     font-size: 27px;
 }
 
-.point_wrapper {
+.point_wrapper_cast {
     width: 90%;
     max-width: 800px;
     border: 1px solid #FFA8C0;
@@ -33,13 +42,36 @@ body {
     margin-top: 30px;
 }
 
-.point_heading {
+.point_wrapper_staff {
+    width: 90%;
+    max-width: 800px;
+    border: 1px solid #BEFAFE;
+    padding: 25px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.r-cast-color {
     color: rgb(255, 163, 206);
     text-shadow: 0 0 10px rgb(255, 0, 119),0 0 15px rgb(255, 0, 119);
+    border-bottom:1px dashed #838383;
+}
+
+.r-staff-color {
+    color: #BEFAFE;
+    text-shadow: 0 0 10px rgb(0, 153, 255),0 0 15px rgb(0, 153, 255);
+    border-bottom:1px dashed #838383;
+}
+
+.point_heading {
     font-size: 20px;
     padding-bottom: 20px;
-    border-bottom:1px dashed #FFA8C0;
+    line-height: 30px;
 }
+
+
 
 .point_text {
     font-size: 13px;
@@ -47,8 +79,187 @@ body {
     line-height: 23px;
 }
 
+/*===========================================================*/
+/*お問い合わせ１
+/*===========================================================*/
+
+#pc_recruit_contact {
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5)),url(../img/shop_image/shopImg_06.jpg);  /* 背景画像指定 */
+    background-size: cover;
+    background-position: center;
+    padding: 30px 10px;
+    font-family: '遊ゴシック', 'ヒラギノ角ゴ ProN';
+}
+
+.r-contact_title {
+    padding: 25px 0;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.r_contact_text {
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.r_btn_wrapper {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px auto;
+}
+
+.r_contact_btn {
+    width: 32%;
+    border-radius: 25px;
+    height: 55px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    img {
+        width: 25px;
+        padding-top: 10px;
+    }
+    p {
+        position: absolute;
+        font-size: 12px;
+        padding: 5px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        white-space: nowrap;
+    }
+}
+
+.pc_line {
+    background: rgb(200,230,58);
+    background: linear-gradient(164deg, rgba(200,230,58,1) 0%, rgba(0,140,0,1) 100%);
+}
+
+.pc_mail  {
+    background: rgb(230,88,136);
+    background: linear-gradient(164deg, rgba(230,88,136,1) 0%, rgba(117,1,133,1) 100%);
+}
+
+.pc_tel  {
+    background: rgb(67,196,173);
+    background: linear-gradient(164deg, rgba(67,196,173,1) 0%, rgba(6,32,176,1) 100%);
+}
+
+.r_contact_time {
+    font-size: 12px;
+    padding: 10px 0 20px 0;
+}
+
+
+/*===========================================================*/
+/*スタッフ求人概要
+/*===========================================================*/
+
+
+
+.recruit_btn_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-flex-wrap: wrap;          /* Safari etc. */
+    -ms-flex-wrap    : wrap;          /* IE10        */
+    flex-wrap        : wrap;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto 70px auto;
+}
+
+.r-table_btn {
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin: 7px 0;
+}
+
+.r-table_btn_text {
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.dli-chevron-down {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    line-height: 1;
+    width: 9px;
+    height: 9px;
+    border: 0.1em solid currentColor;
+    border-left: 0;
+    border-bottom: 0;
+    box-sizing: border-box;
+    transform: translateY(-25%) rotate(135deg);
+}
+
+.r-staff-table {
+    margin-bottom: 60px;
+}
+
+caption {
+    padding: 15px 20px;
+    color: #000;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*===========================================================*/
+/*テーブル
+/*===========================================================*/
+
+.recruit_table {
+    max-width: 800px;
+}
+.recruit_th {
+    width: 25%;
+}
+
+.recruit_td {
+    padding: 5%;
+    font-size: 13px;
+    line-height: 23px;
+}
+
+.table_title {
+    font-size: 18px;
+}
+
+.big_money {
+    font-size: 16px;
+    color: #FF0000;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+.recruit_td_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 300px;
+}
+
+
+/*===========================================================*/
+/*働くまでの流れ
+/*===========================================================*/
+
 #work_flow {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -82,9 +293,10 @@ body {
 }
 
 .recruit_heading_sub {
-    font-size: 11px;
+    font-size: 13px;
     text-align: center;
-    color: #FF5D89;
+    color: #FFB43C;
+    font-weight: bold;
 }
 
 .w_f_heading {
@@ -93,8 +305,7 @@ body {
 
 .w_f_contents {
     width: 90%;
-    max-width: 800px;
-    border: 1px solid #fff;
+    border: 1px solid #FFB43C;
     padding: 25px 0 10px 0;
     text-align: center;
     margin: 0 auto;
@@ -104,7 +315,8 @@ body {
     letter-spacing: 1px;
     height: 340px;
     align-items: center;
-    max-width:300px;
+    max-width:370px;
+    position: relative;
 }
 
 .w_f_headding {
@@ -165,23 +377,34 @@ body {
     margin: 5px auto;
 }
 
+/*===========================================================*/
+/*働くまでの流れ ボタン
+/*===========================================================*/
+
 .my-btn {
-  text-align: center;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    width: 90%;
 }
 .my-btn a {
-  display: inline-block;
-  width: 50%;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 30px;
-  text-align: center;
-  color: #fff!important;
-  text-decoration: none;
-  font-size: 15px;
-  line-height: 27px;
-  font-weight: bold;
-  position: relative;
-  overflow: hidden;
+    display: inline-block;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 30px;
+    text-align: center;
+    color: #fff!important;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 27px;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
 }
 
 .w_f_TELBtn {
@@ -206,39 +429,117 @@ body {
 
 /* ボタンを凹ませる */
 .my-btn a:active {
-  transform: translateY(4px); /*下に動く*/
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
-  border-bottom: none;
+    transform: translateY(4px); /*下に動く*/
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); /*影を小さく*/
+    border-bottom: none;
 }
 /* ボタンをキラッとさせる */
 .my-btn a:before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: -100%;
-  background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 100) 81%, rgba(255, 255, 255, 0) 100%);
-  animation: shine 3s infinite; /* inifiniteによりずっと続ける */
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient(130deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 80%, rgba(255, 255, 255, 100) 81%, rgba(255, 255, 255, 0) 100%);
+    animation: shine 3s infinite; /* inifiniteによりずっと続ける */
 }
 @keyframes shine {
-  33% {
-    left: 100%;
-  }
-  100% {
-    left: 100%;
-  }
+    33% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
 }
 /* テキストの後ろにarrow */
 .my-btn a:after {
-  content: '»';
-  display: inline-block;
-  color: #fff;
-  padding-left: 10px;
-  font-size: 20px;
+    content: '»';
+    display: inline-block;
+    color: #fff;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
 .my-btn a {
     width: 90%;
-  }
+}
+
+
+/*===========================================================*/
+/*働くまでの流れ ボタン
+/*===========================================================*/
+
+
+
+
+#mob_footer_fixed {
+    position: fixed;
+    z-index: 9;
+    bottom: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: '遊ゴシック', 'ヒラギノ角ゴ ProN';
+    height: 55px;
+    margin: 0 auto;
+    .r-mob_footer_icon {
+        width: 31%;
+        margin: 3px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 12px;
+        border-radius: 25px;
+        height: 100%;
+    img {
+        height: 20px;
+    }
+    p {
+        font-size: 9px;
+        padding: 5px 0 6px 0;
+        font-weight: bold;
+        
+    }
+    }
+}
+
+.footer_line_btn {
+    background: rgb(200,230,58);
+    background: linear-gradient(164deg, rgba(200,230,58,1) 0%, rgba(0,140,0,1) 100%);
+}
+
+.footer_mail_btn {
+    background: rgb(230,88,136);
+    background: linear-gradient(164deg, rgba(230,88,136,1) 0%, rgba(117,1,133,1) 100%);
+    // margin-bottom: 5px;
+}
+
+.footer_mail_icon {
+    padding: 2px;
+}
+
+
+
+.footer_tel_btn {
+    background: rgb(67,196,173);
+    background: linear-gradient(164deg, rgba(67,196,173,1) 0%, rgba(6,32,176,1) 100%);
+}
+
+
+
+
+@media (min-width: 767px) {
+    #mob_footer_fixed {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    #pc_recruit_contact {
+        display: none;
+    }
+}
+

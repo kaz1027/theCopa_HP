@@ -284,9 +284,6 @@ td {
 }
 
 /*===========================================================*/
-/*フッター
-/*===========================================================*/
-/*===========================================================*/
 /*ACCESS
 /*===========================================================*/
 #access {
@@ -313,7 +310,7 @@ td {
   display: block;
 }
 
-.footer_logo {
+.footer_logo_mob {
   width: 77px;
   margin: 20px;
 }
@@ -329,12 +326,13 @@ td {
           align-items: flex-start;
   line-height: 23px;
   font-size: 13px;
-  max-width: 600px;
+  max-width: 800px;
   margin: 30px auto;
 }
 
 .shop_info {
   margin: 0 auto;
+  padding-top: 30px;
 }
 
 .bold {
@@ -364,7 +362,7 @@ td {
 
 .footer_text {
   text-align: center;
-  font-size: 13px;
+  font-size: 10px;
   padding-bottom: 80px;
 }
 
@@ -410,8 +408,14 @@ td {
   padding: 5px 0 10px 0;
 }
 
+/*===========================================================*/
+/*レスポンシブ
+/*===========================================================*/
 @media (max-width: 767px) {
   .pc_header {
+    display: none;
+  }
+  .footer_logo_pc {
     display: none;
   }
 }
@@ -474,7 +478,8 @@ td {
     display: none !important;
   }
   .shop_info {
-    max-width: 600px;
+    max-width: 1000px;
+    padding-top: 50px;
   }
   .shop_info img {
     width: 144px;
@@ -495,6 +500,12 @@ td {
     margin: auto;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .footer_text {
+    padding-bottom: 30px;
+  }
+  .footer_logo_mob {
+    display: none;
   }
 }
 /*# sourceMappingURL=common.css.map */
