@@ -345,11 +345,25 @@ caption {
 }
 
 .w_f_MAIL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
-        background-color: #8E00A0;
+        padding: 10px;
+        width: 50px;
+        
     }
 }
 
+.w_f_MAIL_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #8E00A0;
+    border-radius: 50%;
+}
 
 
 
