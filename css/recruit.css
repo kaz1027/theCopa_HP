@@ -392,8 +392,37 @@ caption {
   background-color: #12C211;
 }
 
+.w_f_MAIL {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .w_f_MAIL img {
+  padding: 10px;
+  width: 50px;
+}
+
+.w_f_MAIL_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
   background-color: #8E00A0;
+  border-radius: 50%;
 }
 
 .w_f_heading_text {
