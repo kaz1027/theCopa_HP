@@ -86,21 +86,20 @@ section {
   position: fixed;
   z-index: 9999;
   /*ナビのスタート位置と形状*/
-  top: -120%;
-  left: 0;
-  width: 100%;
+  top: 0;
+  right: -120%;
+  width: 70%;
   height: 100vh;
   /*ナビの高さ*/
-  background: black;
+  background: #00075D;
   /*動き*/
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  opacity: 0.9;
 }
 
 /*アクティブクラスがついたら位置を0に*/
 #g-nav.panelactive {
-  top: 0;
+  right: 0;
 }
 
 /*ナビゲーションの縦スクロール*/
@@ -108,7 +107,7 @@ section {
   /*ナビの数が増えた場合縦スクロール*/
   position: fixed;
   z-index: 9999;
-  width: 100%;
+  width: 70%;
   height: 100vh;
   /*表示する高さ*/
   overflow: auto;
@@ -118,30 +117,47 @@ section {
 /*ナビゲーション*/
 #g-nav ul {
   /*ナビゲーション天地中央揃え*/
-  position: absolute;
   z-index: 9999;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  padding: 70px 10px 0 10px;
 }
 
 /*リストのレイアウト設定*/
 #g-nav li {
   list-style: none;
-  text-align: center;
+  text-align: left;
+  border-bottom: 2px solid #EEB50A;
+  margin-bottom: 20px;
 }
 
 #g-nav li a {
-  color: #fff;
+  color: #EEB50A;
   opacity: 1;
   text-decoration: none;
   padding: 10px;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: bold;
   font-family: 'CaviarDreams_Bold';
+  font-size: 13px;
+}
+
+.arrow {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #EEB50A;
+  border-right: solid 2px #EEB50A;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .nav-subText {
@@ -205,6 +221,119 @@ section {
   -webkit-transform: translateY(-6px) rotate(45deg);
           transform: translateY(-6px) rotate(45deg);
   width: 30%;
+}
+
+/*==================================================
+じわっ
+===================================*/
+/* ぼかしから出現 */
+.blur {
+  -webkit-animation-name: blurAnime;
+          animation-name: blurAnime;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes blurAnime {
+  from {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes blurAnime {
+  from {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+  }
+  to {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeInTrigger,
+.fadeUpTrigger {
+  opacity: 0;
 }
 
 /*===========================================================*/
